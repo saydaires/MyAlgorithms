@@ -2,25 +2,25 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class WordsSentenceFrequency {
+public class Exercise01 {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Write an sentence: ");
         String sentence = scanner.nextLine();
-        //debug 1: testing the splitWords method;
+
         ArrayList<String> sentenceWords = new ArrayList<>();
         sentenceWords = splitWords(sentence);
-        //debug 2: testing the frequency method;
-        System.out.println(sentenceWords);
+
         ArrayList<Integer> frequencyWords = new ArrayList<>();
         frequencyWords = frequencyList(sentenceWords);
-        System.out.println("Frequency Words: " + frequencyWords);
+
         eliminateDuplicateWords(sentenceWords);
-        System.out.println(sentenceWords); //debug 3;
+
         HashMap<String, Integer> map = new HashMap<>();
         createHashMap(sentenceWords, frequencyWords, map);
-        System.out.println("Sentence: " + sentence);
+
+        System.out.println("\nSentence: " + sentence);
         System.out.println(map);
     }
     
